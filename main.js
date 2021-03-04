@@ -127,8 +127,16 @@ class Book {
 const bookOne = new Book('UI UX Deisgn principles', 'Belly Mosh', '2099');
 bookOne.revies('2021');
 console.log(bookOne);
-
 console.log(Book.topBookStore());
 
+// Magazine Subclass
+class Magazine extends Book {
+	constructor(title, author, month) {
+		super(title, author, year); // call from parnet class (Book)
+		this.month = month;
+	}
+}
 
-
+const magOne = new Magazine('MAG', 'Bobby Smurda', '2001', 'Feb');
+console.log(magOne);
+console.log(magOne.getSummary);
